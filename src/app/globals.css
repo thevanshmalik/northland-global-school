@@ -23,14 +23,15 @@
 body {
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   background-attachment: fixed;
-  color: var(--foreground);
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
   transition: background 0.3s ease;
+  color: #1f2937; /* Dark gray for light mode */
 }
 
 .dark body {
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #f9fafb; /* Light color for dark mode */
 }
 
 /* Glassmorphic utility classes */

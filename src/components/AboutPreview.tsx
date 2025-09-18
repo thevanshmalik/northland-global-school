@@ -46,13 +46,13 @@ const AboutPreview = () => {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
                 About <span className="gradient-text">Northland Global School</span>
               </h2>
-              <p className="text-xl text-gray-600 dark:text-white/90 leading-relaxed mb-6">
+              <p className="text-xl text-gray-700 dark:text-white/90 leading-relaxed mb-6">
                 Established with a vision to provide world-class education, Northland Global School has been at the forefront of educational excellence for over 15 years. We believe in nurturing young minds to become confident, compassionate, and capable leaders of tomorrow.
               </p>
-              <p className="text-lg text-gray-600 dark:text-white/80 leading-relaxed mb-8">
+              <p className="text-lg text-gray-700 dark:text-white/80 leading-relaxed mb-8">
                 Our commitment to academic excellence, combined with a focus on holistic development, ensures that every student receives the best possible education in a supportive and inspiring environment.
               </p>
             </div>
@@ -84,10 +84,10 @@ const AboutPreview = () => {
                 <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 dark:text-white/80 text-sm leading-relaxed">
+                <p className="text-gray-700 dark:text-white/80 text-sm leading-relaxed">
                   {feature.description}
                 </p>
               </motion.div>

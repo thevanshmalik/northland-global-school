@@ -43,7 +43,7 @@ const Navbar = () => {
             </div>
             <div className="hidden sm:block">
               <h1 className="text-xl font-bold text-gray-900 dark:text-white">Northland Global School</h1>
-              <p className="text-xs text-gray-600 dark:text-white/80">Excellence in Education</p>
+              <p className="text-xs text-gray-700 dark:text-white/80">Excellence in Education</p>
             </div>
           </Link>
 
@@ -56,7 +56,7 @@ const Navbar = () => {
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                   pathname === item.href
                     ? 'text-gray-900 dark:text-white bg-gray-200/50 dark:bg-white/20 backdrop-blur-sm'
-                    : 'text-gray-700 dark:text-white/90 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200/30 dark:hover:bg-white/10'
+                    : 'text-gray-800 dark:text-white/90 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200/30 dark:hover:bg-white/10'
                 }`}
               >
                 {item.name}
@@ -97,7 +97,7 @@ const Navbar = () => {
                   className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-200 ${
                     pathname === item.href
                       ? 'text-gray-900 dark:text-white bg-gray-200/50 dark:bg-white/20'
-                      : 'text-gray-700 dark:text-white/90 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200/30 dark:hover:bg-white/10'
+                      : 'text-gray-800 dark:text-white/90 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200/30 dark:hover:bg-white/10'
                   }`}
                   onClick={() => setIsOpen(false)}
                 >

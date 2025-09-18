@@ -48,10 +48,10 @@ const MissionVision = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Our <span className="gradient-text">Mission & Vision</span>
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 dark:text-white/80 max-w-3xl mx-auto">
             Guiding principles that shape our educational philosophy and drive our commitment to excellence.
           </p>
         </motion.div>
@@ -69,10 +69,10 @@ const MissionVision = () => {
               <div className={`w-16 h-16 bg-gradient-to-br ${card.gradient} rounded-2xl flex items-center justify-center mb-6`}>
                 <card.icon className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 {card.title}
               </h3>
-              <p className="text-white/80 leading-relaxed text-lg">
+              <p className="text-gray-700 dark:text-white/80 leading-relaxed text-lg">
                 {card.content}
               </p>
             </motion.div>
@@ -86,7 +86,7 @@ const MissionVision = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center"
         >
-          <h3 className="text-3xl font-bold text-white mb-8">Our Core Values</h3>
+          <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Our Core Values</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {values.map((value, index) => (
               <motion.div
@@ -99,10 +99,10 @@ const MissionVision = () => {
                 <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <value.icon className="w-6 h-6 text-white" />
                 </div>
-                <h4 className="text-xl font-semibold text-white mb-2">
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                   {value.title}
                 </h4>
-                <p className="text-white/70">
+                <p className="text-gray-600 dark:text-white/70">
                   {value.description}
                 </p>
               </motion.div>

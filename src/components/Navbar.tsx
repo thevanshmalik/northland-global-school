@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, GraduationCap } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,8 +42,8 @@ const Navbar = () => {
               <GraduationCap className="w-6 h-6 text-white" />
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-white">Northland Global School</h1>
-              <p className="text-xs text-white/80">Excellence in Education</p>
+              <h1 className="text-xl font-bold text-gray-900 dark:text-white">Northland Global School</h1>
+              <p className="text-xs text-gray-600 dark:text-white/80">Excellence in Education</p>
             </div>
           </Link>
 
@@ -54,8 +55,8 @@ const Navbar = () => {
                 href={item.href}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                   pathname === item.href
-                    ? 'text-white bg-white/20 backdrop-blur-sm'
-                    : 'text-white/90 hover:text-white hover:bg-white/10'
+                    ? 'text-gray-900 dark:text-white bg-gray-200/50 dark:bg-white/20 backdrop-blur-sm'
+                    : 'text-gray-700 dark:text-white/90 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200/30 dark:hover:bg-white/10'
                 }`}
               >
                 {item.name}
@@ -63,8 +64,9 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
+          {/* CTA Button & Theme Toggle */}
           <div className="hidden lg:flex items-center space-x-4">
+            <ThemeToggle />
             <Link
               href="/admissions"
               className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-6 py-2 rounded-full text-sm font-medium hover:shadow-lg hover:scale-105 transition-all duration-200"
@@ -77,7 +79,7 @@ const Navbar = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:text-white/80 focus:outline-none focus:text-white/80"
+              className="text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-white/80 focus:outline-none focus:text-gray-700 dark:focus:text-white/80"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -94,15 +96,18 @@ const Navbar = () => {
                   href={item.href}
                   className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-200 ${
                     pathname === item.href
-                      ? 'text-white bg-white/20'
-                      : 'text-white/90 hover:text-white hover:bg-white/10'
+                      ? 'text-gray-900 dark:text-white bg-gray-200/50 dark:bg-white/20'
+                      : 'text-gray-700 dark:text-white/90 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200/30 dark:hover:bg-white/10'
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4">
+              <div className="pt-4 space-y-3">
+                <div className="flex justify-center">
+                  <ThemeToggle />
+                </div>
                 <Link
                   href="/admissions"
                   className="block w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-6 py-3 rounded-full text-center font-medium hover:shadow-lg transition-all duration-200"

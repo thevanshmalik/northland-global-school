@@ -91,8 +91,8 @@ A modern, professional website for Northland Global School built with Next.js, f
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd northland-school-website
+   git clone https://github.com/thevanshmalik/northland-global-school.git
+   cd northland-global-school
    ```
 
 2. **Install dependencies**

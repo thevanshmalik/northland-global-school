@@ -68,10 +68,10 @@ const WhyChooseUs = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-6">
             Why Choose <span className="gradient-text">Northland Global School?</span>
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 dark:text-white/90 max-w-3xl mx-auto leading-relaxed">
             We are committed to providing an exceptional educational experience that prepares students for success in an ever-changing world. Here's what sets us apart:
           </p>
         </motion.div>
@@ -89,12 +89,12 @@ const WhyChooseUs = () => {
               <div className={`w-14 h-14 bg-gradient-to-br ${highlight.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                 <highlight.icon className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">
-                {highlight.title}
-              </h3>
-              <p className="text-white/70 leading-relaxed">
-                {highlight.description}
-              </p>
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">
+                  {highlight.title}
+                </h3>
+                <p className="text-gray-600 dark:text-white/80 leading-relaxed">
+                  {highlight.description}
+                </p>
             </motion.div>
           ))}
         </div>
@@ -109,16 +109,16 @@ const WhyChooseUs = () => {
           <div className="glass-card p-8 rounded-3xl max-w-4xl mx-auto">
             <div className="flex items-center justify-center mb-4">
               <Zap className="w-8 h-8 text-yellow-400 mr-3" />
-              <h3 className="text-2xl font-bold text-white">Ready to Join Our Community?</h3>
+              <h3 className="text-2xl font-bold text-gray-800 dark:text-white">Ready to Join Our Community?</h3>
             </div>
-            <p className="text-white/80 text-lg mb-6">
+            <p className="text-gray-600 dark:text-white/90 text-lg mb-6">
               Experience the difference that quality education and personalized attention can make in your child's academic journey.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <button className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">
                 Schedule a Visit
               </button>
-              <button className="glass text-white px-8 py-3 rounded-full font-semibold hover:bg-white/20 transition-all duration-300">
+              <button className="glass text-gray-800 dark:text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-200/30 dark:hover:bg-white/20 transition-all duration-300">
                 Download Brochure
               </button>
             </div>

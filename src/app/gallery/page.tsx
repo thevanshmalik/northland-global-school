@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
-import { Camera, Filter, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function GalleryPage() {
   const [ref, inView] = useInView({
@@ -73,10 +72,10 @@ export default function GalleryPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               School <span className="gradient-text">Gallery</span>
             </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-700 dark:text-white/80 max-w-3xl mx-auto leading-relaxed">
               Capturing the vibrant moments of learning, growth, and celebration at Northland Global School.
             </p>
           </motion.div>
@@ -99,7 +98,7 @@ export default function GalleryPage() {
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
                   selectedCategory === category.id
                     ? 'bg-gradient-to-r from-primary-500 to-secondary-500 text-white'
-                    : 'glass-card text-white/80 hover:text-white hover:bg-white/20'
+                    : 'glass-card text-gray-700 dark:text-white/80 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200/30 dark:hover:bg-white/20'
                 }`}
               >
                 {category.name}
@@ -124,18 +123,18 @@ export default function GalleryPage() {
               >
                 <div className="glass-card rounded-2xl overflow-hidden hover:scale-105 transition-all duration-300">
                   <div className="relative h-64 bg-gradient-to-br from-primary-500/20 to-secondary-500/20 flex items-center justify-center">
-                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <Camera className="w-8 h-8 text-white" />
+                    <div className="w-16 h-16 bg-gray-200/50 dark:bg-white/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      
                     </div>
                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <div className="text-white text-center">
-                        <Camera className="w-8 h-8 mx-auto mb-2" />
+                      <div className="text-gray-900 dark:text-white text-center">
+                        
                         <p className="text-sm font-medium">View Image</p>
                       </div>
                     </div>
                   </div>
                   <div className="p-4">
-                    <h3 className="text-white font-semibold text-center">
+                    <h3 className="text-gray-900 dark:text-white font-semibold text-center">
                       {image.title}
                     </h3>
                   </div>
@@ -151,9 +150,9 @@ export default function GalleryPage() {
               className="text-center py-12"
             >
               <div className="glass-card p-8 rounded-3xl max-w-md mx-auto">
-                <Filter className="w-16 h-16 text-white/60 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">No Images Found</h3>
-                <p className="text-white/70">
+                
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">No Images Found</h3>
+                <p className="text-gray-700 dark:text-white/70">
                   No images found for the selected category. Try selecting a different category.
                 </p>
               </div>
@@ -176,13 +175,13 @@ export default function GalleryPage() {
               onClick={closeLightbox}
               className="absolute -top-12 right-0 text-white hover:text-white/80 transition-colors duration-200"
             >
-              <X className="w-8 h-8" />
+              
             </button>
             
             <div className="relative">
               <div className="w-full h-96 bg-gradient-to-br from-primary-500/20 to-secondary-500/20 rounded-2xl flex items-center justify-center">
                 <div className="text-center text-white">
-                  <Camera className="w-16 h-16 mx-auto mb-4" />
+                  
                   <h3 className="text-2xl font-semibold mb-2">
                     {filteredImages[selectedImage]?.title}
                   </h3>
@@ -199,9 +198,9 @@ export default function GalleryPage() {
                   e.stopPropagation();
                   prevImage();
                 }}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-200"
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/20 dark:bg-white/20 rounded-full flex items-center justify-center text-gray-700 dark:text-white hover:bg-white/30 dark:hover:bg-white/30 transition-all duration-200"
               >
-                <ChevronLeft className="w-6 h-6" />
+                
               </button>
               
               <button
@@ -209,9 +208,9 @@ export default function GalleryPage() {
                   e.stopPropagation();
                   nextImage();
                 }}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-200"
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/20 dark:bg-white/20 rounded-full flex items-center justify-center text-gray-700 dark:text-white hover:bg-white/30 dark:hover:bg-white/30 transition-all duration-200"
               >
-                <ChevronRight className="w-6 h-6" />
+                
               </button>
             </div>
 

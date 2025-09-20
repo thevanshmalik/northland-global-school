@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Link from 'next/link';
-import { ArrowRight, Users, BookOpen, Award, Globe } from 'lucide-react';
 
 const AboutPreview = () => {
   const [ref, inView] = useInView({
@@ -13,22 +12,26 @@ const AboutPreview = () => {
 
   const features = [
     {
-      icon: Users,
+      lightElement: '👥',
+      lightColor: 'bg-blue-100 text-blue-700 border-blue-200',
       title: 'Holistic Development',
       description: 'We focus on academic excellence, character building, and personal growth.',
     },
     {
-      icon: BookOpen,
+      lightElement: '📚',
+      lightColor: 'bg-green-100 text-green-700 border-green-200',
       title: 'Modern Curriculum',
       description: 'CBSE curriculum enhanced with innovative teaching methodologies.',
     },
     {
-      icon: Award,
+      lightElement: '🏆',
+      lightColor: 'bg-yellow-100 text-yellow-700 border-yellow-200',
       title: 'Academic Excellence',
       description: 'Consistent track record of outstanding board examination results.',
     },
     {
-      icon: Globe,
+      lightElement: '🌍',
+      lightColor: 'bg-purple-100 text-purple-700 border-purple-200',
       title: 'Global Perspective',
       description: 'Preparing students to be responsible global citizens.',
     },
@@ -62,7 +65,9 @@ const AboutPreview = () => {
               className="inline-flex items-center space-x-2 bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
               <span>Learn More About Us</span>
-              <ArrowRight className="w-5 h-5" />
+              <div className="w-5 h-5">
+                <div className="w-0 h-0 border-l-[6px] border-l-white border-y-[4px] border-y-transparent"></div>
+              </div>
             </Link>
           </motion.div>
 
@@ -81,8 +86,13 @@ const AboutPreview = () => {
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                 className="glass-card p-6 rounded-2xl hover:scale-105 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
+                {/* Light Theme Element */}
+                <div className={`w-12 h-12 ${feature.lightColor} border-2 rounded-xl flex items-center justify-center mb-4 text-lg dark:hidden`}>
+                  {feature.lightElement}
+                </div>
+                {/* Dark Theme Element */}
+                <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center mb-4 text-white text-lg hidden dark:flex">
+                  {feature.lightElement}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                   {feature.title}

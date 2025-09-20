@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, Play, Star } from 'lucide-react';
+// Removed all icon imports - using custom elements instead
 
 const Hero = () => {
   return (
@@ -26,7 +26,12 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="inline-flex items-center space-x-2 glass-card px-6 py-3 rounded-full"
           >
-            <Star className="w-5 h-5 text-yellow-400" />
+            <div className="w-5 h-5 bg-yellow-100 border border-yellow-200 rounded flex items-center justify-center text-yellow-700 text-sm dark:hidden">
+              ⭐
+            </div>
+            <div className="w-5 h-5 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded flex items-center justify-center text-white text-sm hidden dark:flex">
+              ⭐
+            </div>
             <span className="text-gray-900 dark:text-white font-medium">CBSE Affiliated School</span>
           </motion.div>
 
@@ -64,11 +69,15 @@ const Hero = () => {
               className="group bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center space-x-2"
             >
               <span>Start Your Journey</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+              <div className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200">
+                <div className="w-0 h-0 border-l-[6px] border-l-white border-y-[4px] border-y-transparent"></div>
+              </div>
             </Link>
             
             <button className="group glass-card text-gray-900 dark:text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-200/30 dark:hover:bg-white/20 transition-all duration-300 flex items-center space-x-2">
-              <Play className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+              <div className="w-5 h-5 group-hover:scale-110 transition-transform duration-200">
+                <div className="w-0 h-0 border-l-[8px] border-l-current border-y-[6px] border-y-transparent ml-1"></div>
+              </div>
               <span>Watch Our Story</span>
             </button>
           </motion.div>

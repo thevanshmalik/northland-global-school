@@ -3,16 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
-  Send,
-  MessageCircle,
-  Users,
-  Calendar
-} from 'lucide-react';
+// Removed all icon imports - using custom elements instead
 
 export default function ContactPage() {
   const [ref, inView] = useInView({
@@ -30,7 +21,7 @@ export default function ContactPage() {
 
   const contactInfo = [
     {
-      icon: MapPin,
+      
       title: 'Address',
       details: [
         '123 Education Street',
@@ -39,7 +30,7 @@ export default function ContactPage() {
       ],
     },
     {
-      icon: Phone,
+      
       title: 'Phone',
       details: [
         '+1 (234) 567-8900',
@@ -47,7 +38,7 @@ export default function ContactPage() {
       ],
     },
     {
-      icon: Mail,
+      
       title: 'Email',
       details: [
         'info@northlandglobalschool.edu',
@@ -55,7 +46,7 @@ export default function ContactPage() {
       ],
     },
     {
-      icon: Clock,
+      
       title: 'Office Hours',
       details: [
         'Monday - Friday: 8:00 AM - 5:00 PM',
@@ -66,19 +57,19 @@ export default function ContactPage() {
 
   const departments = [
     {
-      icon: Users,
+      
       title: 'Admissions',
       email: 'admissions@northlandglobalschool.edu',
       phone: '+1 (234) 567-8902',
     },
     {
-      icon: MessageCircle,
+      
       title: 'General Inquiry',
       email: 'info@northlandglobalschool.edu',
       phone: '+1 (234) 567-8900',
     },
     {
-      icon: Calendar,
+      
       title: 'Events & Activities',
       email: 'events@northlandglobalschool.edu',
       phone: '+1 (234) 567-8903',
@@ -109,10 +100,10 @@ export default function ContactPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               Get in <span className="gradient-text">Touch</span>
             </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-700 dark:text-white/80 max-w-3xl mx-auto leading-relaxed">
               We'd love to hear from you. Contact us for any inquiries, admissions, or to schedule a visit.
             </p>
           </motion.div>
@@ -128,10 +119,10 @@ export default function ContactPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
               Contact <span className="gradient-text">Information</span>
             </h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 dark:text-white/80 max-w-3xl mx-auto">
               Reach out to us through any of the following channels.
             </p>
           </motion.div>
@@ -146,14 +137,14 @@ export default function ContactPage() {
                 className="glass-card p-6 rounded-2xl text-center hover:scale-105 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <info.icon className="w-8 h-8 text-white" />
+                  
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   {info.title}
                 </h3>
                 <div className="space-y-1">
                   {info.details.map((detail, idx) => (
-                    <p key={idx} className="text-white/70 text-sm">
+                    <p key={idx} className="text-gray-700 dark:text-white/70 text-sm">
                       {detail}
                     </p>
                   ))}
@@ -175,10 +166,10 @@ export default function ContactPage() {
               transition={{ duration: 0.8 }}
             >
               <div className="glass-card p-8 rounded-3xl">
-                <h2 className="text-3xl font-bold text-white mb-6">
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
                   Send us a <span className="gradient-text">Message</span>
                 </h2>
-                <p className="text-white/80 mb-8">
+                <p className="text-gray-700 dark:text-white/80 mb-8">
                   Fill out the form below and we'll get back to you as soon as possible.
                 </p>
 
@@ -192,7 +183,7 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-white/10 dark:bg-white/10 border border-gray-300 dark:border-white/20 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                         placeholder="Enter your full name"
                       />
                     </div>
@@ -204,7 +195,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-white/10 dark:bg-white/10 border border-gray-300 dark:border-white/20 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                         placeholder="Enter your email"
                       />
                     </div>
@@ -218,7 +209,7 @@ export default function ContactPage() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-white/10 dark:bg-white/10 border border-gray-300 dark:border-white/20 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                         placeholder="Enter your phone number"
                       />
                     </div>
@@ -229,7 +220,7 @@ export default function ContactPage() {
                         value={formData.subject}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-white/10 dark:bg-white/10 border border-gray-300 dark:border-white/20 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                       >
                         <option value="">Select a subject</option>
                         <option value="admissions">Admissions Inquiry</option>
@@ -250,7 +241,7 @@ export default function ContactPage() {
                       onChange={handleInputChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-white/10 dark:bg-white/10 border border-gray-300 dark:border-white/20 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                       placeholder="Enter your message..."
                     />
                   </div>
@@ -260,7 +251,7 @@ export default function ContactPage() {
                     className="w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 flex items-center justify-center space-x-2"
                   >
                     <span>Send Message</span>
-                    <Send className="w-5 h-5" />
+                    
                   </button>
                 </form>
               </div>
@@ -275,12 +266,12 @@ export default function ContactPage() {
             >
               {/* Map */}
               <div className="glass-card p-6 rounded-3xl">
-                <h3 className="text-2xl font-bold text-white mb-4">Find Us</h3>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Find Us</h3>
                 <div className="w-full h-64 bg-gradient-to-br from-primary-500/20 to-secondary-500/20 rounded-2xl flex items-center justify-center">
                   <div className="text-center">
-                    <MapPin className="w-12 h-12 text-white/60 mx-auto mb-2" />
-                    <p className="text-white/60">Interactive Map</p>
-                    <p className="text-white/40 text-sm">123 Education Street, Knowledge City</p>
+                    
+                    <p className="text-gray-600 dark:text-white/60">Interactive Map</p>
+                    <p className="text-gray-500 dark:text-white/40 text-sm">123 Education Street, Knowledge City</p>
                   </div>
                 </div>
               </div>
@@ -298,7 +289,7 @@ export default function ContactPage() {
                       className="flex items-center space-x-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all duration-200"
                     >
                       <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center">
-                        <dept.icon className="w-5 h-5 text-white" />
+                        
                       </div>
                       <div className="flex-1">
                         <h4 className="text-white font-semibold">{dept.title}</h4>
@@ -324,7 +315,7 @@ export default function ContactPage() {
             className="text-center"
           >
             <div className="glass-card p-12 rounded-3xl max-w-4xl mx-auto">
-              <h2 className="text-4xl font-bold text-white mb-6">
+              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
                 Need <span className="gradient-text">Immediate Assistance?</span>
               </h2>
               <p className="text-xl text-white/80 mb-8 leading-relaxed">
@@ -335,11 +326,11 @@ export default function ContactPage() {
                   href="tel:+12345678900"
                   className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center space-x-2"
                 >
-                  <Phone className="w-5 h-5" />
+                  
                   <span>Call Now</span>
                 </a>
                 <button className="glass text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center space-x-2">
-                  <Calendar className="w-5 h-5" />
+                  
                   <span>Schedule Visit</span>
                 </button>
               </div>

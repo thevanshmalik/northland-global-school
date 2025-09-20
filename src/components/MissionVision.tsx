@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Target, Eye, Heart, Lightbulb } from 'lucide-react';
+// Removed all icon imports - using custom elements instead
 
 const MissionVision = () => {
   const [ref, inView] = useInView({
@@ -12,29 +12,33 @@ const MissionVision = () => {
 
   const cards = [
     {
-      icon: Target,
       title: 'Our Mission',
       content: 'To provide a nurturing environment that fosters academic excellence, character development, and innovation, preparing students to become confident leaders and responsible global citizens.',
       gradient: 'from-blue-500 to-cyan-500',
+      lightElement: '🎯',
+      lightColor: 'bg-blue-100 text-blue-700 border-blue-200',
     },
     {
-      icon: Eye,
       title: 'Our Vision',
       content: 'To be a leading educational institution that inspires lifelong learning, promotes creativity, and shapes the future through excellence in education and character building.',
       gradient: 'from-purple-500 to-pink-500',
+      lightElement: '👁️',
+      lightColor: 'bg-purple-100 text-purple-700 border-purple-200',
     },
   ];
 
   const values = [
     {
-      icon: Heart,
       title: 'Integrity',
       description: 'We uphold the highest standards of honesty and ethical behavior.',
+      lightElement: '❤️',
+      lightColor: 'bg-red-100 text-red-700 border-red-200',
     },
     {
-      icon: Lightbulb,
       title: 'Innovation',
       description: 'We embrace creativity and forward-thinking approaches to education.',
+      lightElement: '💡',
+      lightColor: 'bg-yellow-100 text-yellow-700 border-yellow-200',
     },
   ];
 
@@ -66,8 +70,13 @@ const MissionVision = () => {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className="glass-card p-8 rounded-3xl hover:scale-105 transition-all duration-300"
             >
-              <div className={`w-16 h-16 bg-gradient-to-br ${card.gradient} rounded-2xl flex items-center justify-center mb-6`}>
-                <card.icon className="w-8 h-8 text-white" />
+              {/* Light Theme Element */}
+              <div className={`w-16 h-16 ${card.lightColor} border-2 rounded-2xl flex items-center justify-center mb-6 text-2xl dark:hidden`}>
+                {card.lightElement}
+              </div>
+              {/* Dark Theme Element */}
+              <div className={`w-16 h-16 bg-gradient-to-br ${card.gradient} rounded-2xl flex items-center justify-center mb-6 text-white text-2xl hidden dark:flex`}>
+                {card.lightElement}
               </div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 {card.title}
@@ -96,8 +105,13 @@ const MissionVision = () => {
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.2 }}
                 className="glass-card p-6 rounded-2xl"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="w-6 h-6 text-white" />
+                {/* Light Theme Element */}
+                <div className={`w-12 h-12 ${value.lightColor} border-2 rounded-xl flex items-center justify-center mx-auto mb-4 text-lg dark:hidden`}>
+                  {value.lightElement}
+                </div>
+                {/* Dark Theme Element */}
+                <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4 text-white text-lg hidden dark:flex">
+                  {value.lightElement}
                 </div>
                 <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                   {value.title}

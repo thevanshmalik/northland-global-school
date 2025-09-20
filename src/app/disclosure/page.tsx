@@ -153,10 +153,10 @@ export default function DisclosurePage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               Mandatory <span className="gradient-text">Disclosure</span>
             </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-700 dark:text-white/80 max-w-3xl mx-auto leading-relaxed">
               As per CBSE norms, we provide complete transparency about our school's information, policies, and procedures.
             </p>
           </motion.div>
@@ -172,10 +172,10 @@ export default function DisclosurePage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
               School <span className="gradient-text">Information</span>
             </h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 dark:text-white/80 max-w-3xl mx-auto">
               Complete disclosure of school information as mandated by CBSE guidelines.
             </p>
           </motion.div>
@@ -189,9 +189,9 @@ export default function DisclosurePage() {
                 transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
                 className="glass-card p-8 rounded-3xl"
               >
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
                   <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center mr-3">
-                    <FileText className="w-5 h-5 text-white" />
+                    
                   </div>
                   {category.category}
                 </h3>
@@ -199,10 +199,10 @@ export default function DisclosurePage() {
                   {category.items.map((item, itemIndex) => (
                     <div key={itemIndex} className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-4">
                       <div className="w-full sm:w-1/3">
-                        <span className="text-white/70 font-medium">{item.label}:</span>
+                        <span className="text-gray-700 dark:text-white/70 font-medium">{item.label}:</span>
                       </div>
                       <div className="w-full sm:w-2/3">
-                        <span className="text-white font-semibold">{item.value}</span>
+                        <span className="text-gray-900 dark:text-white font-semibold">{item.value}</span>
                       </div>
                     </div>
                   ))}
@@ -222,10 +222,10 @@ export default function DisclosurePage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
               Important <span className="gradient-text">Documents</span>
             </h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 dark:text-white/80 max-w-3xl mx-auto">
               Download important school documents and certificates.
             </p>
           </motion.div>
@@ -241,17 +241,17 @@ export default function DisclosurePage() {
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Download className="w-6 h-6 text-white" />
+                    
                   </div>
                   <div className="flex-1">
                     <h3 className="text-white font-semibold mb-2">{doc.title}</h3>
                     <div className="space-y-1 text-sm text-white/70">
                       <div className="flex items-center space-x-2">
-                        <FileText className="w-4 h-4" />
+                        
                         <span>{doc.type} • {doc.size}</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <Calendar className="w-4 h-4" />
+                        
                         <span>{doc.date}</span>
                       </div>
                     </div>
@@ -277,7 +277,7 @@ export default function DisclosurePage() {
           >
             <div className="glass-card p-12 rounded-3xl max-w-4xl mx-auto">
               <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="w-10 h-10 text-white" />
+                
               </div>
               <h2 className="text-3xl font-bold text-white mb-6">
                 CBSE Compliance <span className="gradient-text">Statement</span>
@@ -315,7 +315,7 @@ export default function DisclosurePage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
               Questions About <span className="gradient-text">Disclosure?</span>
             </h2>
             <p className="text-xl text-white/80 mb-8 max-w-3xl mx-auto">
@@ -327,14 +327,14 @@ export default function DisclosurePage() {
                 href="tel:+12345678900"
                 className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center space-x-2"
               >
-                <Phone className="w-5 h-5" />
+                
                 <span>Call Us</span>
               </a>
               <a
                 href="mailto:info@northlandglobalschool.edu"
-                className="glass text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center space-x-2"
+                className="glass text-gray-900 dark:text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-200/30 dark:hover:bg-white/20 transition-all duration-300 flex items-center space-x-2"
               >
-                <Mail className="w-5 h-5" />
+                
                 <span>Email Us</span>
               </a>
             </div>

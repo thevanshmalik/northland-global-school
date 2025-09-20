@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, GraduationCap } from 'lucide-react';
+// Removed all icon imports - using custom elements instead
 import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
@@ -32,31 +32,27 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200/20 dark:border-white/10' : 'bg-transparent'
+      scrolled ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200/30 dark:border-white/20 shadow-sm' : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center">
-              <GraduationCap className="w-6 h-6 text-white" />
-            </div>
-            <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-gray-900 dark:text-white">Northland Global School</h1>
-              <p className="text-xs text-gray-700 dark:text-white/80">Excellence in Education</p>
-            </div>
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="flex justify-between items-center h-20">
+          {/* School Name */}
+          <Link href="/" className="flex items-center flex-shrink-0">
+            <h1 className="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white tracking-wide">
+              NORTHLAND GLOBAL SCHOOL
+            </h1>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-2">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                className={`px-4 py-3 rounded-lg text-sm font-semibold transition-all duration-200 ${
                   pathname === item.href
-                    ? 'text-gray-900 dark:text-white bg-gray-200/50 dark:bg-white/20 backdrop-blur-sm'
-                    : 'text-gray-800 dark:text-white/90 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200/30 dark:hover:bg-white/10'
+                    ? 'text-gray-900 dark:text-white bg-gray-200/60 dark:bg-white/25 backdrop-blur-sm shadow-sm'
+                    : 'text-gray-700 dark:text-white/80 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200/40 dark:hover:bg-white/15'
                 }`}
               >
                 {item.name}
@@ -69,7 +65,7 @@ const Navbar = () => {
             <ThemeToggle />
             <Link
               href="/admissions"
-              className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-6 py-2 rounded-full text-sm font-medium hover:shadow-lg hover:scale-105 transition-all duration-200"
+              className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-6 py-3 rounded-xl text-sm font-semibold hover:shadow-lg hover:scale-105 transition-all duration-200 shadow-md"
             >
               Apply Now
             </Link>
@@ -81,7 +77,18 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-white/80 focus:outline-none focus:text-gray-700 dark:focus:text-white/80"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? (
+                <div className="w-6 h-6 flex flex-col justify-center items-center">
+                  <div className="w-5 h-0.5 bg-current rotate-45 absolute"></div>
+                  <div className="w-5 h-0.5 bg-current -rotate-45 absolute"></div>
+                </div>
+              ) : (
+                <div className="w-6 h-6 flex flex-col justify-center items-center space-y-1">
+                  <div className="w-5 h-0.5 bg-current"></div>
+                  <div className="w-5 h-0.5 bg-current"></div>
+                  <div className="w-5 h-0.5 bg-current"></div>
+                </div>
+              )}
             </button>
           </div>
         </div>
@@ -89,28 +96,28 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 glass-card rounded-lg mt-2">
+            <div className="px-4 pt-4 pb-6 space-y-2 glass-card rounded-2xl mt-3 shadow-lg">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-200 ${
+                  className={`block px-4 py-3 rounded-xl text-base font-semibold transition-all duration-200 ${
                     pathname === item.href
-                      ? 'text-gray-900 dark:text-white bg-gray-200/50 dark:bg-white/20'
-                      : 'text-gray-800 dark:text-white/90 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200/30 dark:hover:bg-white/10'
+                      ? 'text-gray-900 dark:text-white bg-gray-200/60 dark:bg-white/25'
+                      : 'text-gray-700 dark:text-white/80 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200/40 dark:hover:bg-white/15'
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4 space-y-3">
+              <div className="pt-6 space-y-4 border-t border-gray-200/30 dark:border-white/20 mt-4">
                 <div className="flex justify-center">
                   <ThemeToggle />
                 </div>
                 <Link
                   href="/admissions"
-                  className="block w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-6 py-3 rounded-full text-center font-medium hover:shadow-lg transition-all duration-200"
+                  className="block w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-6 py-4 rounded-xl text-center font-semibold hover:shadow-lg transition-all duration-200 shadow-md"
                   onClick={() => setIsOpen(false)}
                 >
                   Apply Now

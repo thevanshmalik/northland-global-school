@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState, useEffect } from 'react';
-import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Testimonials = () => {
   const [ref, inView] = useInView({
@@ -69,10 +68,10 @@ const Testimonials = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             What Parents <span className="gradient-text">Say</span>
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 dark:text-white/80 max-w-3xl mx-auto">
             Hear from our community of parents who have witnessed the transformative power of education at Northland Global School.
           </p>
         </motion.div>
@@ -88,7 +87,7 @@ const Testimonials = () => {
             <div className="text-center">
               {/* Quote Icon */}
               <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Quote className="w-8 h-8 text-white" />
+                
               </div>
 
               {/* Testimonial Content */}
@@ -100,14 +99,14 @@ const Testimonials = () => {
                 transition={{ duration: 0.5 }}
                 className="mb-8"
               >
-                <p className="text-xl text-white/90 leading-relaxed mb-6 italic">
+                <p className="text-xl text-gray-700 dark:text-white/90 leading-relaxed mb-6 italic">
                   "{testimonials[currentTestimonial].content}"
                 </p>
 
                 {/* Rating */}
                 <div className="flex justify-center space-x-1 mb-6">
                   {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <span key={i} className="text-yellow-400 text-lg">⭐</span>
                   ))}
                 </div>
 
@@ -119,10 +118,10 @@ const Testimonials = () => {
                     </span>
                   </div>
                   <div className="text-left">
-                    <h4 className="text-white font-semibold text-lg">
+                    <h4 className="text-gray-900 dark:text-white font-semibold text-lg">
                       {testimonials[currentTestimonial].name}
                     </h4>
-                    <p className="text-white/70 text-sm">
+                    <p className="text-gray-700 dark:text-white/70 text-sm">
                       {testimonials[currentTestimonial].role}
                     </p>
                   </div>
@@ -133,9 +132,9 @@ const Testimonials = () => {
               <div className="flex items-center justify-center space-x-4">
                 <button
                   onClick={prevTestimonial}
-                  className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-200"
+                  className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-gray-200/30 dark:hover:bg-white/20 transition-all duration-200"
                 >
-                  <ChevronLeft className="w-6 h-6 text-white" />
+                  
                 </button>
 
                 {/* Dots */}
@@ -147,7 +146,7 @@ const Testimonials = () => {
                       className={`w-3 h-3 rounded-full transition-all duration-200 ${
                         index === currentTestimonial
                           ? 'bg-primary-500'
-                          : 'bg-white/30 hover:bg-white/50'
+                          : 'bg-gray-300 dark:bg-white/30 hover:bg-gray-400 dark:hover:bg-white/50'
                       }`}
                     />
                   ))}
@@ -155,9 +154,9 @@ const Testimonials = () => {
 
                 <button
                   onClick={nextTestimonial}
-                  className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-200"
+                  className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-gray-200/30 dark:hover:bg-white/20 transition-all duration-200"
                 >
-                  <ChevronRight className="w-6 h-6 text-white" />
+                  
                 </button>
               </div>
             </div>
@@ -173,16 +172,16 @@ const Testimonials = () => {
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="glass-card p-6 rounded-2xl text-center">
-              <div className="text-3xl font-bold text-white mb-2">98%</div>
-              <div className="text-white/70">Parent Satisfaction</div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">98%</div>
+              <div className="text-gray-700 dark:text-white/70">Parent Satisfaction</div>
             </div>
             <div className="glass-card p-6 rounded-2xl text-center">
-              <div className="text-3xl font-bold text-white mb-2">500+</div>
-              <div className="text-white/70">Happy Families</div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">500+</div>
+              <div className="text-gray-700 dark:text-white/70">Happy Families</div>
             </div>
             <div className="glass-card p-6 rounded-2xl text-center">
-              <div className="text-3xl font-bold text-white mb-2">15+</div>
-              <div className="text-white/70">Years of Trust</div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">15+</div>
+              <div className="text-gray-700 dark:text-white/70">Years of Trust</div>
             </div>
           </div>
         </motion.div>

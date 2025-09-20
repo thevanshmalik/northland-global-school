@@ -42,7 +42,7 @@ export default function CareersPage() {
       type: 'Full-time',
       location: 'Knowledge City',
       experience: '2-5 years',
-      icon: BookOpen,
+      
       description: 'We are looking for an experienced Mathematics teacher to join our academic team.',
       requirements: [
         'Master\'s degree in Mathematics or related field',
@@ -59,7 +59,7 @@ export default function CareersPage() {
       type: 'Full-time',
       location: 'Knowledge City',
       experience: '2-5 years',
-      icon: Microscope,
+      
       description: 'Join our science department and inspire the next generation of scientists.',
       requirements: [
         'Master\'s degree in Science (Physics/Chemistry/Biology)',
@@ -76,7 +76,7 @@ export default function CareersPage() {
       type: 'Part-time',
       location: 'Knowledge City',
       experience: '1-3 years',
-      icon: Music,
+      
       description: 'Share your passion for music and help students discover their musical talents.',
       requirements: [
         'Degree in Music or related field',
@@ -93,7 +93,7 @@ export default function CareersPage() {
       type: 'Full-time',
       location: 'Knowledge City',
       experience: '1-3 years',
-      icon: Dumbbell,
+      
       description: 'Promote physical fitness and sports excellence among our students.',
       requirements: [
         'Degree in Physical Education or Sports Science',
@@ -110,7 +110,7 @@ export default function CareersPage() {
       type: 'Full-time',
       location: 'Knowledge City',
       experience: '3-5 years',
-      icon: Users,
+      
       description: 'Provide guidance and support to students in their academic and personal development.',
       requirements: [
         'Master\'s degree in Psychology or Counseling',
@@ -127,7 +127,7 @@ export default function CareersPage() {
       type: 'Full-time',
       location: 'Knowledge City',
       experience: '1-2 years',
-      icon: Briefcase,
+      
       description: 'Support our administrative team in managing school operations efficiently.',
       requirements: [
         'Bachelor\'s degree in any field',
@@ -191,10 +191,10 @@ export default function CareersPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               Join Our <span className="gradient-text">Team</span>
             </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-700 dark:text-white/80 max-w-3xl mx-auto leading-relaxed">
               Be part of our mission to provide world-class education and shape the future of our students.
             </p>
           </motion.div>
@@ -210,10 +210,10 @@ export default function CareersPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
               Why Work at <span className="gradient-text">Northland Global School?</span>
             </h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 dark:text-white/80 max-w-3xl mx-auto">
               Join a community of passionate educators dedicated to excellence in education.
             </p>
           </motion.div>
@@ -228,12 +228,12 @@ export default function CareersPage() {
                 className="glass-card p-6 rounded-2xl text-center hover:scale-105 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <GraduationCap className="w-8 h-8 text-white" />
+                  
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   {benefit.title}
                 </h3>
-                <p className="text-white/70 leading-relaxed">
+                <p className="text-gray-700 dark:text-white/70 leading-relaxed">
                   {benefit.description}
                 </p>
               </motion.div>
@@ -251,10 +251,10 @@ export default function CareersPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
               Current <span className="gradient-text">Openings</span>
             </h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 dark:text-white/80 max-w-3xl mx-auto">
               Explore our current job opportunities and find the perfect role for you.
             </p>
           </motion.div>
@@ -270,7 +270,7 @@ export default function CareersPage() {
               >
                 <div className="flex items-start space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center">
-                    <job.icon className="w-8 h-8 text-white" />
+                    
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-white mb-2">{job.title}</h3>
@@ -284,11 +284,11 @@ export default function CareersPage() {
                     </div>
                     <div className="flex items-center space-x-4 text-white/70 text-sm">
                       <div className="flex items-center space-x-1">
-                        <MapPin className="w-4 h-4" />
+                        
                         <span>{job.location}</span>
                       </div>
                       <div className="flex items-center space-x-1">
-                        <Clock className="w-4 h-4" />
+                        
                         <span>{job.experience}</span>
                       </div>
                     </div>
@@ -329,7 +329,7 @@ export default function CareersPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
               Apply for a <span className="gradient-text">Position</span>
             </h2>
             <p className="text-xl text-white/80">
@@ -353,7 +353,7 @@ export default function CareersPage() {
                     value={applicationData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-white/10 dark:bg-white/10 border border-gray-300 dark:border-white/20 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -365,7 +365,7 @@ export default function CareersPage() {
                     value={applicationData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-white/10 dark:bg-white/10 border border-gray-300 dark:border-white/20 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -380,7 +380,7 @@ export default function CareersPage() {
                     value={applicationData.phone}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-white/10 dark:bg-white/10 border border-gray-300 dark:border-white/20 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     placeholder="Enter your phone number"
                   />
                 </div>
@@ -391,7 +391,7 @@ export default function CareersPage() {
                     value={applicationData.position}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-white/10 dark:bg-white/10 border border-gray-300 dark:border-white/20 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   >
                     <option value="">Select a position</option>
                     {jobOpenings.map((job) => (
@@ -408,7 +408,7 @@ export default function CareersPage() {
                   value={applicationData.experience}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-white/10 dark:bg-white/10 border border-gray-300 dark:border-white/20 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 >
                   <option value="">Select experience level</option>
                   <option value="0-1">0-1 years</option>
@@ -439,13 +439,13 @@ export default function CareersPage() {
                     accept=".pdf,.doc,.docx"
                     onChange={handleFileChange}
                     required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-white/10 dark:bg-white/10 border border-gray-300 dark:border-white/20 rounded-lg text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   />
                   <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-                    <Upload className="w-5 h-5 text-white/50" />
+                    
                   </div>
                 </div>
-                <p className="text-white/60 text-sm mt-2">
+                <p className="text-gray-600 dark:text-white/60 text-sm mt-2">
                   Accepted formats: PDF, DOC, DOCX (Max size: 5MB)
                 </p>
               </div>
@@ -455,7 +455,7 @@ export default function CareersPage() {
                 className="w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 flex items-center justify-center space-x-2"
               >
                 <span>Submit Application</span>
-                <Send className="w-5 h-5" />
+                
               </button>
             </form>
           </motion.div>

@@ -2,20 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { 
-  FileText, 
-  Download, 
-  Calendar, 
-  Users, 
-  Award, 
-  BookOpen,
-  Building,
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  CheckCircle
-} from 'lucide-react';
+// Using emoji icons instead of lucide-react
 
 export default function DisclosurePage() {
   const [ref, inView] = useInView({

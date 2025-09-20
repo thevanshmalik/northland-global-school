@@ -3,20 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
-import { 
-  Briefcase, 
-  Users, 
-  MapPin, 
-  Clock, 
-  Send, 
-  Upload,
-  FileText,
-  GraduationCap,
-  BookOpen,
-  Microscope,
-  Music,
-  Dumbbell
-} from 'lucide-react';
+// Using emoji icons instead of lucide-react
 
 export default function CareersPage() {
   const [ref, inView] = useInView({
